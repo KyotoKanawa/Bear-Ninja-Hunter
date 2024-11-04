@@ -26,8 +26,23 @@
         // Hard-coded computer choice
         let computerChoice = 'Bear';
 
+        // Determine the game result
+        let gameResultMessage;
+        switch (playerChoice) {
+            case 'Bear':
+                gameResultMessage = `You chose Bear. The computer chose Bear. It's a tie!`;
+                break;
+            case 'Ninja':
+                gameResultMessage = `You chose Ninja. The computer chose Bear. The computer wins!`;
+                break;
+            case 'Hunter':
+                gameResultMessage = `You chose Hunter. The computer chose Bear. You win!`;
+                break;
+            default:
+                gameResultMessage = `Invalid choice. Please refresh the page and try again.`;
+        }
+
         // Display the game result on the HTML page and console
-        let gameResultMessage = `You chose ${playerChoice}. The computer chose ${computerChoice}.`;
         document.getElementById('gameResult').innerHTML = gameResultMessage;
         console.log(gameResultMessage);
     </script>
