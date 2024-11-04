@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear Ninja Hunter Game</title>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <h1>Bear Ninja Hunter Game</h1>
+    <p id="welcomeMessage"></p>
+    <p id="gameResult"></p>
 
+    <script>
+        // Collect the player's name
+        let playerName = prompt('Welcome to Bear Ninja Hunter! Please enter your name:');
+        
+        // Greet the player with a personalized message
+        alert(`Hello, ${playerName}! Let's play Bear Ninja Hunter!`);
+        
+        // Display the welcome message on the HTML page
+        document.getElementById('welcomeMessage').innerHTML = `Welcome, ${playerName}!`;
+
+        // Prompt the player's choice
+        let playerChoice = prompt('Please choose: Bear, Ninja, or Hunter');
+
+        // Hard-coded computer choice
+        let computerChoice = 'Bear';
+
+        // Display the game result on the HTML page and console
+        let gameResultMessage = `You chose ${playerChoice}. The computer chose ${computerChoice}.`;
+        document.getElementById('gameResult').innerHTML = gameResultMessage;
+        console.log(gameResultMessage);
+    </script>
+</body>
 </html>
